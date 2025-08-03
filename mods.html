@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LFnighTT | صفحه مودها</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      background: url('assets/images/background.png') no-repeat center center fixed;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    body::after {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: inherit; /* همون بکگراند body */
+  filter: blur(8px);
+  z-index: -1;
+  transform: scale(1.1); /* کمی بزرگ‌تر برای مخفی کردن لبه تار */
+}
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 30px auto;
+      max-width: 1000px;
+    }
+    .filters input,
+    .filters select {
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: none;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fff;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .file-card {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .file-card:hover {
+      transform: translateY(-5px);
+    }
+    .file-card img.thumb {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+    .file-card h3 {
+      margin: 0.5rem 0;
+    }
+    .file-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .file-card span {
+      display: block;
+      margin: 10px 0;
+      font-size: 0.85rem;
+      color: #999;
+    }
+    .btn-main {
+      background: #ff5722;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    .btn-main:hover {
+      background: #e64a19;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body data-aos="fade-zoom-in">
+  <header data-aos="fade-down">
+    <h1>LFnighTT</h1>
+    <p>اینجا لیست مود های داخل بات تلگرام و چنل تلگرام گذاشته شده برای دانلود.</p>
+  </header>
+
+  <main class="container" data-aos="fade-zoom-in">
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="جستجو در عنوان مود..." style="background-color: #0505059c; color: white;">
+      <select id="category-select" style="background-color: #0505059c; color: white;">
+        <option style="background-color: #0505059c; color: white;" value="all">همه دسته‌ها</option>
+        <option style="background-color: #0505059c; color: white;" value="بدراک">بدراک</option>
+        <option style="background-color: #0505059c; color: white;" value="جاوا">جاوا</option>
+      </select>
+    </div>
+    <div id="file-list" class="grid" data-aos="fade-up"></div>
+  </main>
+
+  <footer>
+    <p>تمامی حقوق برای شما محفوظ است © 2025</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
