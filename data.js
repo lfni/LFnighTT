@@ -18,9 +18,10 @@ window.files = [
     features: "امکانات این مود:",
     feature1: "چندین ماب به این نسخه از جنی که برای جاوا هست اضافه شده که کار های مختلفی هم میتوان انجام داد.",
     image: "fapcraft.png",
-    file: "Fapcraft.-.1.12.2.-.v.1.0.jar",
+    file: "https://s34.picofile.com/file/8486261076/Fapcraft_1_12_2_v_1_0.jar.html",
     size: "42MB",
     category: "جاوا"
   },
 ];
+
 
